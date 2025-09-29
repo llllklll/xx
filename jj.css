@@ -11,10 +11,14 @@ body {
   text-align: center;
 
   /* 🔥 الخلفية تمتد وتقص نفسها بحيث تغطي الشاشة بأي جهاز */
-  background-image: url("m.jpg");
-  background-size: cover;       /* يضمن إنها تغطي الشاشة */
-  background-position: center;  /* يثبتها في النص */
-  background-repeat: no-repeat; /* ما تتكرر */
+  background-image: url("7.jpg");
+  /*background-size: cover;       /* يضمن إنها تغطي الشاشة */
+  /*background-position: center;  يثبتها في النص */
+ /* background-repeat: no-repeat;  ما تتكرر */
+
+
+
+
 }
 
 .container {
