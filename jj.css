@@ -10,20 +10,16 @@ body {
   min-height: 100vh;
   text-align: center;
 
-  /* 🔥 الخلفية تمتد وتقص نفسها بحيث تغطي الشاشة بأي جهاز */
+  /* 🔥 الخلفية تبان كاملة بدون قص */
   background-image: url("7.jpg");
-  /*background-size: cover;       /* يضمن إنها تغطي الشاشة */
-  /*background-position: center;  يثبتها في النص */
- /* background-repeat: no-repeat;  ما تتكرر */
-
-
-
-
+  background-size: contain;      /* تبين كاملة */
+  background-position: center;   /* بالنص */
+  background-repeat: no-repeat;  /* ما تتكرر */
 }
 
 .container {
   width: 100%;
-  max-width: 500px;  /* المحتوى ما يكبر أكثر من كذا */
+  max-width: 500px;  
   margin: 0 auto;
   padding: 15px;
   box-sizing: border-box;
@@ -35,7 +31,7 @@ h1 {
   font-size: 2rem;
 }
 
-button {
+button { 
   background-color: #228b22;
   color: white;
   border: none;
@@ -44,9 +40,9 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;       /* ياخذ عرض الشاشة بالجوال */
-  max-width: 300px;  /* بالكمبيوتر ما يكبر مرة */
-  margin: 0 auto;    /* يخليه بالنص */
+  width: 100%;       
+  max-width: 300px;  
+  margin: 0 auto;    
 }
 
 button:hover {
@@ -56,21 +52,20 @@ button:hover {
 .card-box {
   margin-top: 30px;
   display: flex;
-  justify-content: center; /* يوسطن الصور */
+  justify-content: center; 
   align-items: center;
 }
 
 .card-box img {
-  width: 100%;         /* يملأ عرض الحاوية */
-  max-width: 250px;    /* ما يكبر أكثر */
+  width: 100%;         
+  max-width: 250px;    
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   display: none;
-  margin: 0 auto;      /* بالنص حتى لو وحدة */
+  margin: 0 auto;      
 }
 
-/* 📱 للجوالات */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5rem;
