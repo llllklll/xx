@@ -1,3 +1,8 @@
+/* ============================
+   CSS كامل للصفحة
+============================ */
+
+/* الخط العام والصفحة */
 body {
   font-family: "Tajawal", sans-serif;
   margin: 0;
@@ -10,31 +15,30 @@ body {
   min-height: 100vh;
   text-align: center;
 
-  /* 🔥 الخلفية تمتد وتقص نفسها بحيث تغطي الشاشة بأي جهاز */
+  /* الخلفية */
   background-image: url("7.jpg");
-  /*background-size: cover;       /* يضمن إنها تغطي الشاشة */
-  /*background-position: center;  يثبتها في النص */
- /* background-repeat: no-repeat;  ما تتكرر */
-
-
-
-
+  background-size: cover;       /* يغطي الشاشة بالكامل */
+  background-position: center;  /* تمركز الصورة */
+  background-repeat: no-repeat; /* لا تتكرر */
 }
 
+/* الحاوية */
 .container {
   width: 100%;
-  max-width: 500px;  /* المحتوى ما يكبر أكثر من كذا */
+  max-width: 500px;  
   margin: 0 auto;
   padding: 15px;
   box-sizing: border-box;
 }
 
+/* العنوان */
 h1 {
   color: #006400;
   margin-bottom: 20px;
   font-size: 2rem;
 }
 
+/* الأزرار */
 button { 
   background-color: #228b22;
   color: white;
@@ -44,36 +48,42 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;       /* ياخذ عرض الشاشة بالجوال */
-  max-width: 300px;  /* بالكمبيوتر ما يكبر مرة */
-  margin: 0 auto;    /* يخليه بالنص */
+  width: 100%;       
+  max-width: 300px;  
+  margin: 0 auto;    
 }
 
 button:hover {
   background-color: #006400;
 }
 
+/* حاوية الصورة */
 .card-box {
   margin-top: 30px;
   display: flex;
-  justify-content: center; /* يوسطن الصور */
+  justify-content: center; 
   align-items: center;
 }
 
+/* الصور داخل الحاوية */
 .card-box img {
-  width: 100%;         /* يملأ عرض الحاوية */
-  max-width: 250px;    /* ما يكبر أكثر */
+  width: 100%;         
+  max-width: 250px;    
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none;
-  margin: 0 auto;      /* بالنص حتى لو وحدة */
+  display: block;       /* الصورة تظهر */
+  margin: 0 auto;      
 }
 
-/* 📱 للجوالات */
+/* ============================
+   إعدادات للجوال فقط
+============================ */
 @media (max-width: 600px) {
+
   h1 {
     font-size: 1.5rem;
+    margin-bottom: 15px; /* قرب الصورة للنص */
   }
 
   button {
@@ -81,7 +91,15 @@ button:hover {
     font-size: 1.1rem;
   }
 
+  .card-box {
+    margin-top: 15px;       /* تقليل المسافة بين النص والصورة */
+    flex-direction: column;  /* لو أكثر من صورة تصطف عمودياً */
+  }
+
   .card-box img {
-    max-width: 180px;
+    width: 90%;            /* تقريب عرض الصورة للشاشة */
+    max-width: 250px;      /* لا تتجاوز هذا الحجم */
+    height: auto;
+    margin: 10px auto 0;   /* قرب الصورة للنص */
   }
 }
