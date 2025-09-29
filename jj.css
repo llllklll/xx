@@ -9,22 +9,21 @@ body {
   min-height: 100vh;
   text-align: center;
 
-  /* ✨ خلفية صورة */
   background-image: url("m.jpg");
-
-  /*background-size: cover;      
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-*/
 }
 
 .container {
-  margin-top: 0; /* صار في النص ما نحتاج مسافة */
+  margin-top: 0;
+  padding: 15px; /* عشان مايلصق في الأطراف بالجوال */
 }
 
 h1 {
   color: #006400;
   margin-bottom: 20px;
+  font-size: 2rem; /* يتغير تلقائي حسب حجم الشاشة */
 }
 
 button {
@@ -32,7 +31,7 @@ button {
   color: white;
   border: none;
   padding: 12px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
@@ -47,9 +46,27 @@ button:hover {
 }
 
 .card-box img {
-  width: 250px;
+  width: 90%; /* يصغر مع حجم الشاشة */
+  max-width: 250px; /* ما يكبر أكثر من 250 */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  display: none; /* ما تظهر إلا بعد الضغط */
+  display: none;
+}
+
+/* 📱 للجوالات الصغيرة */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%; /* ياخذ عرض الشاشة */
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+
+  .card-box img {
+    max-width: 180px; /* يصغر أكثر */
+  }
 }
