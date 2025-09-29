@@ -4,6 +4,7 @@ body {
   padding: 0;
 
   display: flex;
+  flex-direction: column; /* يخلي العناصر فوق بعض بشكل طبيعي */
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -16,14 +17,17 @@ body {
 }
 
 .container {
-  margin-top: 0;
-  padding: 15px; /* عشان مايلصق في الأطراف بالجوال */
+  width: 100%;
+  max-width: 500px; /* عشان المحتوى مايصير أعرض من الشاشة */
+  margin: 0 auto;
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 h1 {
   color: #006400;
   margin-bottom: 20px;
-  font-size: 2rem; /* يتغير تلقائي حسب حجم الشاشة */
+  font-size: 2rem;
 }
 
 button {
@@ -35,6 +39,8 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%; /* يخلي الزر ياخذ عرض الشاشة على الجوال */
+  max-width: 300px; /* بس على الكمبيوتر ما يكبر مرة */
 }
 
 button:hover {
@@ -46,8 +52,8 @@ button:hover {
 }
 
 .card-box img {
-  width: 90%; /* يصغر مع حجم الشاشة */
-  max-width: 250px; /* ما يكبر أكثر من 250 */
+  width: 100%; /* يملأ عرض الشاشة */
+  max-width: 250px; /* ما يكبر زيادة */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -61,12 +67,11 @@ button:hover {
   }
 
   button {
-    width: 100%; /* ياخذ عرض الشاشة */
     padding: 14px;
     font-size: 1.1rem;
   }
 
   .card-box img {
-    max-width: 180px; /* يصغر أكثر */
+    max-width: 180px;
   }
 }
