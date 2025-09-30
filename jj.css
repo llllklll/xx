@@ -9,11 +9,15 @@ body {
   min-height: 100vh;
   text-align: center;
 
-  /* 🔥 الخلفية تمتد وتقص نفسها بحيث تغطي الشاشة بأي جهاز */
+  /* الحل الشامل لجميع الأجهزة */
   background-image: url("7.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* يثبت الخلفية */
+  
+  /* تأكد من أن الصورة تظهر كاملة في جميع الأجهزة */
+  background-color: #f5f5f5; /* لون احتياطي */
 }
 
 .container {
@@ -22,6 +26,8 @@ body {
   margin: 0 auto;
   padding: 15px;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة للمحتوى */
+  border-radius: 10px;
 }
 
 h1 {
@@ -78,5 +84,17 @@ button:hover {
 
   .card-box img {
     max-width: 180px;
+  }
+  
+  /* تحسين الخلفية للجوال */
+  body {
+    background-attachment: scroll; /* يمنع مشاكل الأداء في الجوال */
+  }
+}
+
+/* تحسين للشاشات الكبيرة */
+@media (min-width: 1200px) {
+  body {
+    background-size: 100% 100%; /* يضمن عرض الصورة كاملة بدون قص */
   }
 }
